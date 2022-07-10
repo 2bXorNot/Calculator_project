@@ -9,16 +9,14 @@ let firstSubArrAdded  = '';
 let secondSubArrAdded = '';
 function equalsButton() {
     for(let i = 0; i < numbersArr[0].length; i++) {
-        for(let k = 0; k < numbersArr[0][i]; k++) {
-            firstSubArrAdded += numbersArr[0][k];
+            firstSubArrAdded += numbersArr[0][i];
             console.log(firstSubArrAdded);
-        };
+        
     };
     for(let j = 0; j < numbersArr[1].length; j++) {
-        for(let p = 0; p < numbersArr[1][j].length; p++) {
-            secondSubArrAdded += numbersArr[1][p];
+            secondSubArrAdded += numbersArr[1][j];
             console.log(secondSubArrAdded);
-        };
+        
     };
     
     addButton();
@@ -27,7 +25,6 @@ function equalsButton() {
     divideButton();
        
 };
-
 
 function addButton() {
     cont++
@@ -66,8 +63,59 @@ function numberTwoButton() {
 function numberThreeButton() {
     numbersArr[cont].push('3');
 }
+function numberFourButton() {
+    numbersArr[cont].push('4');
+};
+function numberFiveButton() {
+    numbersArr[cont].push('5');
+}
+function numberSixButton() {
+    numbersArr[cont].push('6');
+}
+function numberSevenButton() {
+    numbersArr[cont].push('7');
+}
+function numberEightButton() {
+    numbersArr[cont].push('8');
+};
+function numberNineButton() {
+    numbersArr[cont].push('9');
+}
+function numberZeroButton() {
+    numbersArr[cont].push('0');
+}
+
+
+
+
+
+
+
 console.log(final);
 
 
 
 
+
+
+/*
+
+  for(let i = 0; i < numbersArr[0].length; i++) {
+        //console.log(numbersArr[0].length)
+        for(let k = 0; k < numbersArr[0][i]; k++) {
+            firstSubArrAdded += numbersArr[0][i];
+            console.log(firstSubArrAdded);
+        };
+    };
+
+    //
+
+     for(let j = 0; j < numbersArr[1].length; j++) {
+        //console.log(numbersArr[1].length)
+        for(let p = 0; p < numbersArr[1][j].length; p++) {
+            secondSubArrAdded += numbersArr[1][j];
+            console.log(secondSubArrAdded);
+        };
+    };
+
+*/
