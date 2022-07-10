@@ -29,22 +29,22 @@ function equalsButton() {
 function addButton() {
     cont++
     final = (Number(firstSubArrAdded) + Number(secondSubArrAdded));
-    console.log(final);
+    console.log(Number(final.toFixed(2)));
 };
 function subtractButton() {
     cont++
     final = (Number(firstSubArrAdded) - Number(secondSubArrAdded));
-    console.log(final);
+    console.log(Number(final.toFixed(2)));
 };
 function multiplyButton() {
     cont++
     final = (Number(firstSubArrAdded) * Number(secondSubArrAdded));
-    console.log(final);
+    console.log(Number(final.toFixed(2)));
 };
 function divideButton() {
     cont++
     final = (Number(firstSubArrAdded) / Number(secondSubArrAdded));
-    console.log(final);
+    console.log(Number(final.toFixed(2)));
 };
 
 
@@ -82,5 +82,8 @@ function numberNineButton() {
 };
 function numberZeroButton() {
     numbersArr[cont].push('0');
+};
+function periodButton() {
+    numbersArr[cont].push('.');
 };
 
