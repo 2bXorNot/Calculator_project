@@ -1,13 +1,14 @@
 console.log('running_cal_3');
 
-numbersArr = [[],[]];
+let numbersArr = [[],[]];
 console.log(numbersArr);
 
 let count = 0;
-let final = 0;
+let sum = 0;
 let firstSubArrAdded  = '';
 let secondSubArrAdded = '';
-function equalsButton() {
+
+function equalsButton(){ 
     for(let i = 0; i < numbersArr[0].length; i++) {
         firstSubArrAdded += numbersArr[0][i];
         console.log(firstSubArrAdded);
@@ -18,33 +19,41 @@ function equalsButton() {
         console.log(secondSubArrAdded);
         
     };
-    
-    addButton();
-    subtractButton();
-    multiplyButton();
-    divideButton();
-       
+    if(symbol === '+') {
+        sum = Number(firstSubArrAdded) + Number(secondSubArrAdded)
+        console.log(sum.toFixed(2));
+    };
+    if(symbol === '-') {
+        sum = Number(firstSubArrAdded) - Number(secondSubArrAdded)
+        console.log(sum.toFixed(2));
+    };
+    if(symbol === '*') {
+        sum = Number(firstSubArrAdded) * Number(secondSubArrAdded)
+        console.log(sum.toFixed(2));
+    };
+    if(symbol === '/') {
+        sum = Number(firstSubArrAdded) / Number(secondSubArrAdded)
+        console.log(sum.toFixed(2));
+    };
+
 };
+
 
 function addButton() {
     count++
-    final = (Number(firstSubArrAdded) + Number(secondSubArrAdded));
-    console.log(Number(final.toFixed(2)));
+    symbol = '+';
 };
 function subtractButton() {
     count++
-    final = (Number(firstSubArrAdded) - Number(secondSubArrAdded));
-    console.log(Number(final.toFixed(2)));
+    symbol = "-";
 };
 function multiplyButton() {
     count++
-    final = (Number(firstSubArrAdded) * Number(secondSubArrAdded));
-    console.log(Number(final.toFixed(2)));
+    symbol = "*";
 };
 function divideButton() {
     count++
-    final = (Number(firstSubArrAdded) / Number(secondSubArrAdded));
-    console.log(Number(final.toFixed(2)));
+    symbol = "/";
 };
 
 
