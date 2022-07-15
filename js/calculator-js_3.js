@@ -21,19 +21,19 @@ function equalsButton(){
     };
     if(symbol === '+') {
         sum = Number(firstSubArrAdded) + Number(secondSubArrAdded)
-        console.log(sum.toFixed(2));
+        console.log(Number(sum.toFixed(2)));
     };
     if(symbol === '-') {
         sum = Number(firstSubArrAdded) - Number(secondSubArrAdded)
-        console.log(sum.toFixed(2));
+        console.log(Number(sum.toFixed(2)));
     };
     if(symbol === '*') {
         sum = Number(firstSubArrAdded) * Number(secondSubArrAdded)
-        console.log(sum.toFixed(2));
+        console.log(Number(sum.toFixed(2)));
     };
     if(symbol === '/') {
         sum = Number(firstSubArrAdded) / Number(secondSubArrAdded)
-        console.log(sum.toFixed(2));
+        console.log(Number(sum.toFixed(2)));
     };
 
 };
