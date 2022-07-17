@@ -42,22 +42,31 @@ function equalsButton(){
 };
 
 
-
+function restrictCount() {
+    if(count === 1) {
+        count = 0;
+    };
+};
 function addButton() {
-    count++
+    restrictCount()
+    console.log(count);
     symbol = '+';
+    count++
 };
 function subtractButton() {
-    count++
+    restrictCount()
     symbol = "-";
+    count++
 };
 function multiplyButton() {
-    count++
+    restrictCount()
     symbol = "*";
+    count++
 };
 function divideButton() {
-    count++
+    restrictCount()
     symbol = "/";
+    count++
 };
 
 
@@ -93,7 +102,11 @@ function numberZeroButton() {
     numbersArr[count].push('0');
 };
 function periodButton() {
-    numbersArr[count].push('.');
+    if(count === 0 || count === 1) {
+        numbersArr[count].push('.');
+        
+    };    
+    document.getElementById("button-period").disabled = true;
 };
 
 
@@ -108,5 +121,5 @@ function cButton() {
     firstSubArrAdded = '';
     secondSubArrAdded = '';
     count = 0;
-    console.log(0);
+    console.log(count);
 };
