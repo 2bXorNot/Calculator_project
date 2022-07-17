@@ -59,8 +59,11 @@ function divideButton() {
 
 
 function cButton() {
-    //numbersArr = numbersArr.splice(2)
-    //console.log(numbersArr);
+    numbersArr[0].pop();
+    numbersArr[1].pop();
+    firstSubArrAdded = '';
+    secondSubArrAdded = '';
+    count = 0;
 };
 
 function numberOneButton() {
