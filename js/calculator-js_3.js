@@ -5,6 +5,7 @@ console.log(numbersArr);
 
 let count = 0;
 let sum = 0;
+let symbol = '';
 let firstSubArrAdded  = '';
 let secondSubArrAdded = '';
 
