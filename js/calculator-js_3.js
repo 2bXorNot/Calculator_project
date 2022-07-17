@@ -12,7 +12,7 @@ let secondSubArrAdded = '';
 
 //clear functions
 
-function forLoopClear() {
+function forLoopClearArr() {
     for(let i = numbersArr[0].length; i > 0; i--) {
         numbersArr[0].shift()
     };
@@ -20,7 +20,7 @@ function forLoopClear() {
         numbersArr[1].shift();
     };
 };
-function clearStgArrAdded() {
+function clearSubArrAdded() {
     firstSubArrAdded = '';
     secondSubArrAdded = '';
 };
@@ -54,11 +54,11 @@ function equalsButton(){
         sum = Number(firstSubArrAdded) / Number(secondSubArrAdded);
         console.log(Number(sum.toFixed(2)));
     };
-    forLoopClear();
+    forLoopClearArr();
     numbersArr[0].push(sum);
     count = 0;
-    clearStgArrAdded();
-    numbersArr[1]
+    clearSubArrAdded();
+    numbersArr[1];
 };
 
 
@@ -130,9 +130,9 @@ function periodButton() {
 };
 
 
-function cButton() {
-    forLoopClear();
-    clearStgArrAdded();
+function clearButton() {
+    forLoopClearArr();
+    clearSubArrAdded();
     count = 0;
     console.log(count);
 };
