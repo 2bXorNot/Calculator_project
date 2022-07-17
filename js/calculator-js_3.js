@@ -4,12 +4,28 @@ let numbersArr = [[],[]];
 console.log(numbersArr);
 
 let count = 0;
-console.log(count)
+console.log(count);
 let sum = 0;
 let symbol = '';
 let firstSubArrAdded  = '';
 let secondSubArrAdded = '';
 
+//clear functions
+
+function forLoopClear() {
+    for(let i = numbersArr[0].length; i > 0; i--) {
+        numbersArr[0].shift()
+    };
+    for(let k = numbersArr[1].length; k > 0; k--) {
+        numbersArr[1].shift();
+    };
+};
+function clearStgArrAdded() {
+    firstSubArrAdded = '';
+    secondSubArrAdded = '';
+};
+
+//
 
 function equalsButton(){ 
     for(let i = 0; i < numbersArr[0].length; i++) {
@@ -23,22 +39,26 @@ function equalsButton(){
         
     };
     if(symbol === '+') {
-        sum = Number(firstSubArrAdded) + Number(secondSubArrAdded)
+        sum = Number(firstSubArrAdded) + Number(secondSubArrAdded);
         console.log(Number(sum.toFixed(2)));
     };
     if(symbol === '-') {
-        sum = Number(firstSubArrAdded) - Number(secondSubArrAdded)
+        sum = Number(firstSubArrAdded) - Number(secondSubArrAdded);
         console.log(Number(sum.toFixed(2)));
     };
     if(symbol === '*') {
-        sum = Number(firstSubArrAdded) * Number(secondSubArrAdded)
+        sum = Number(firstSubArrAdded) * Number(secondSubArrAdded);
         console.log(Number(sum.toFixed(2)));
     };
     if(symbol === '/') {
-        sum = Number(firstSubArrAdded) / Number(secondSubArrAdded)
+        sum = Number(firstSubArrAdded) / Number(secondSubArrAdded);
         console.log(Number(sum.toFixed(2)));
     };
-
+    forLoopClear();
+    numbersArr[0].push(sum);
+    count = 0;
+    clearStgArrAdded();
+    numbersArr[1]
 };
 
 
@@ -48,28 +68,28 @@ function restrictCount() {
     };
 };
 function addButton() {
-    restrictCount()
-    console.log(count);
+    restrictCount();
+    //console.log(count);
     symbol = '+';
-    count++
+    count++;
 };
 function subtractButton() {
-    restrictCount()
+    restrictCount();
     symbol = "-";
-    count++
+    count++;
 };
 function multiplyButton() {
-    restrictCount()
+    restrictCount();
     symbol = "*";
-    count++
+    count++;
 };
 function divideButton() {
-    restrictCount()
+    restrictCount();
     symbol = "/";
-    count++
+    count++;
 };
 
-
+console.log(count);
 
 function numberOneButton() {
     numbersArr[count].push('1');
@@ -102,7 +122,7 @@ function numberZeroButton() {
     numbersArr[count].push('0');
 };
 function periodButton() {
-    if(count === 0 || count === 1) {
+    if(count === 1) {
         numbersArr[count].push('.');
         
     };    
@@ -110,16 +130,10 @@ function periodButton() {
 };
 
 
-
 function cButton() {
-    for(let i = numbersArr[0].length; i > 0; i--) {
-        numbersArr[0].shift()
-    };
-    for(let k = numbersArr[1].length; k > 0; k--) {
-        numbersArr[1].shift();
-    };
-    firstSubArrAdded = '';
-    secondSubArrAdded = '';
+    forLoopClear();
+    clearStgArrAdded();
     count = 0;
     console.log(count);
 };
+
